@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@8Z00&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-color: #090f1a;
+}
+
+main p {
+  font-family: 'Josefin Sans', sans-serif;
+  color: rgba(255, 255, 255, 0.267);
+  font-size: 30px;
+  margin-top: 20px;
+  opacity: 0;
+  -webkit-animation: anim3 1s 2s;
+          animation: anim3 1s 2s;
+}
+
+main .ph {
+  opacity: 1;
+}
+
+main .h1 {
+  opacity: 1;
+}
+
+main .h1::before {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: cyan;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-animation: anim2 2s 1s forwards;
+          animation: anim2 2s 1s forwards;
+  border-radius: 10px;
+}
+
+main .h1::after {
+  position: absolute;
+  content: "Beliefy.agency";
+  top: 0;
+  left: 0;
+  color: cyan;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  -webkit-animation: anim1 1s 1s forwards;
+          animation: anim1 1s 1s forwards;
+}
+
+main h1 {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 120px;
+  color: rgba(0, 255, 255, 0);
+  -webkit-text-stroke: 0.8px cyan;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@-webkit-keyframes anim1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes anim1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes anim3 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes anim3 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes anim2 {
+  0% {
+    left: 0;
+    height: 100%;
+    opacity: 1;
+  }
+  50% {
+    left: calc(100% + 20px);
+    height: 100%;
+    opacity: 1;
+  }
+  100% {
+    left: calc(100% + 20px);
+    height: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes anim2 {
+  0% {
+    left: 0;
+    height: 100%;
+    opacity: 1;
+  }
+  50% {
+    left: calc(100% + 20px);
+    height: 100%;
+    opacity: 1;
+  }
+  100% {
+    left: calc(100% + 20px);
+    height: 0;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  main h1 {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 670px) {
+  main h1 {
+    font-size: 60px;
+  }
+  main p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  main h1 {
+    font-size: 40px;
+  }
+  main p {
+    font-size: 18px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
